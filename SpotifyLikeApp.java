@@ -28,6 +28,9 @@ public class SpotifyLikeApp {
     Long position;
     static Clip audioClip;
     private static Clip clip;
+    private static Object name;
+    private static Object artist;
+    private static Object image;
 
     // "main" makes this class a java app that can be executed
     public static void main(final String[] args) {
@@ -118,6 +121,8 @@ public class SpotifyLikeApp {
         // open the audio file
         final File file = new File("Drake - Girls Want Girls.wav");
 
+       
+
         try {
         
             // create clip 
@@ -136,8 +141,10 @@ public class SpotifyLikeApp {
         
        
         }
-
     }
+
+
+
 
 
 }
