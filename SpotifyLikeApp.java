@@ -67,7 +67,7 @@ public class SpotifyLikeApp {
         System.out.println("[L]ibrary");
         System.out.println("[P]lay");
         System.out.println("[Q]uit");
-        System.out.println("[R]eset");
+        
 
         System.out.println("");
         System.out.print("Enter q to quit:");
@@ -100,8 +100,6 @@ public class SpotifyLikeApp {
 
             case "q":
                 System.out.println("-->Quit<--");
-                break;
-            case "r": clip.setMicrosecondPosition(0);
                 break;
 
             default:
