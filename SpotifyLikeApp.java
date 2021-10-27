@@ -26,6 +26,7 @@ public class SpotifyLikeApp {
     String status;
     Long position;
     static Clip audioClip;
+    private static Clip clip;
 
     // "main" makes this class a java app that can be executed
     public static void main(final String[] args) {
@@ -66,6 +67,7 @@ public class SpotifyLikeApp {
         System.out.println("[L]ibrary");
         System.out.println("[P]lay");
         System.out.println("[Q]uit");
+        System.out.println("[R]eset");
 
         System.out.println("");
         System.out.print("Enter q to quit:");
@@ -98,6 +100,8 @@ public class SpotifyLikeApp {
 
             case "q":
                 System.out.println("-->Quit<--");
+                break;
+            case "r": clip.setMicrosecondPosition(0);
                 break;
 
             default:
