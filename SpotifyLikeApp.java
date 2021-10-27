@@ -97,7 +97,7 @@ public class SpotifyLikeApp {
                 break;
 
             case "q":
-                System.out.println("-->Quit<--");
+                System.out.println("-->Quit, byee<--");
                 break;
 
             default:
