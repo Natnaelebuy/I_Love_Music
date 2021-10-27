@@ -10,6 +10,7 @@ import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.SourceDataLine;
 import javax.sound.sampled.DataLine.Info;
+import javax.swing.JButton;
 
 import static javax.sound.sampled.AudioSystem.getAudioInputStream;
 import static javax.sound.sampled.AudioFormat.Encoding.PCM_SIGNED;
@@ -101,6 +102,7 @@ public class SpotifyLikeApp {
             case "q":
                 System.out.println("-->Quit<--");
                 break;
+            
 
             default:
                 break;
@@ -130,6 +132,8 @@ public class SpotifyLikeApp {
 
         } catch(Exception e) {
             e.printStackTrace(); 
+        
+        
        
         }
 
