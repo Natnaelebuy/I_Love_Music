@@ -60,8 +60,7 @@ public class SpotifyLikeApp {
      */
     public static void menu() {
 
-        //System.out.println("---- SpotifyLikeApp ----");
-        System.out.println("Mysong");
+        System.out.println("---- SpotifyLikeApp ----");
         System.out.println("[H]ome");
         System.out.println("[S]earch by title");
         System.out.println("[L]ibrary");
@@ -69,7 +68,7 @@ public class SpotifyLikeApp {
         System.out.println("[Q]uit");
 
         System.out.println("");
-        System.out.print("Hawaz ahahaha:");
+        System.out.print("Enter q to quit:");
 
     }
 
@@ -113,7 +112,7 @@ public class SpotifyLikeApp {
     public static void play() {
 
         // open the audio file
-        final File file = new File("./src/library/spotify_fma_track1_cropped.wav");
+        final File file = new File("Drake - Girls Want Girls.wav");
 
         try {
         
