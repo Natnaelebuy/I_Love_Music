@@ -60,7 +60,8 @@ public class SpotifyLikeApp {
      */
     public static void menu() {
 
-        System.out.println("---- SpotifyLikeApp ----");
+        //System.out.println("---- SpotifyLikeApp ----");
+        System.out.println("Mysong");
         System.out.println("[H]ome");
         System.out.println("[S]earch by title");
         System.out.println("[L]ibrary");
@@ -68,7 +69,7 @@ public class SpotifyLikeApp {
         System.out.println("[Q]uit");
 
         System.out.println("");
-        System.out.print("Enter q to Quit:");
+        System.out.print("Hawaz ahahaha:");
 
     }
 
