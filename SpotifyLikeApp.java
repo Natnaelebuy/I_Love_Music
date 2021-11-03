@@ -27,28 +27,28 @@ public class SpotifyLikeApp {
     String status;
     Long position;
     static Clip audioClip;
-    private static Clip clip;
-    private static Object name;
-    private static Object artist;
-    private static Object image;
+    static String song = "./Mysong/Drake - No Friends In The Industry.wav";
+    static Boolean Playing = false;
+    //private static Clip clip;
+   // private static Object name;
+    //private static Object artist;
+    //private static Object image;
 
     // "main" makes this class a java app that can be executed
     public static void main(final String[] args) {
 
         // create a scanner for user input
         Scanner input = new Scanner(System.in);
-
         String userInput = "";
+
         while (!userInput.equals("q")) {
 
             menu();
 
             // get input
             userInput = input.nextLine();
-
             // accept upper or lower case commands
             userInput.toLowerCase();
-
             // do something
             handleMenu(userInput);
 
@@ -90,6 +90,7 @@ public class SpotifyLikeApp {
 
             case "s":
                 System.out.println("-->Search by title<--");
+                Search();
                 break;
 
             case "l":
@@ -98,7 +99,6 @@ public class SpotifyLikeApp {
                 
             case "p":
                 System.out.println("-->Play<--");
-                play();
                 break;
 
             case "q":
@@ -115,32 +115,65 @@ public class SpotifyLikeApp {
     /*
      * plays an audio file
      */
-    public static void play() {
-
+    public static void play(String Song) {
         // open the audio file
-        final File file = new File("Drake - Girls Want Girls.wav");
-      
-
+        final File file = new File(song);
         try {
-        
+             if (Playing = true)
+             {
+                 audioClip.stop();
+                 Playing = false;
+             }
             // create clip 
             audioClip = AudioSystem.getClip();
-
             // get input stream
             final AudioInputStream in = getAudioInputStream(file);
-
             audioClip.open(in);
             audioClip.setMicrosecondPosition(0);
             audioClip.loop(Clip.LOOP_CONTINUOUSLY);
-
+            Playing = true;
         } catch(Exception e) {
             e.printStackTrace(); 
         
-        
-       
         }
+        
+        
+            
+        
+    }
+    public static void Rewind() 
+    {
+        Scanner input = new Scanner(System.in);
+        audioClip.stop();
+        System.out.println(audioClip.getMicrosecondPosition());
+        System.out.println("How far back would you like to go? + \n");
+        Long Rewound = (input.nextLong()*1000);
+        Long CurrentTime = audioClip.getMicrosecondPosition();
+        Long NewTime = CurrentTime - Rewound;
+        audioClip.setMicrosecondPosition(NewTime);
+        audioClip.loop(Clip.LOOP_CONTINUOUSLY);
+        System.out.println(audioClip.getMicrosecondPosition());
     }
 
+    public static void Search() {
+        String[] Songlist;
+        Songlist = new String[2];
+        Songlist[0] = "./Mysong/Drake - No Friends In The Industry.wav";
+        Songlist[1] = "./Mysong/Dee_Yan-Key_-_10_-_vacaciones_salsa.wav";
+
+        for(int k = 0; k < Songlist.length; k++)
+        {
+            int a = k+1;
+            System.out.println(a + Songlist[k]);
+        }
+        
+        System.out.println("Please choose a song");
+        Scanner Selection = new Scanner(System.in);
+        int Choice;
+        Choice = Selection.nextInt() - 1;
+        song = Songlist[Choice];
+        
+    }
 
 
 
