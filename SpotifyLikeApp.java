@@ -59,7 +59,6 @@ public class SpotifyLikeApp {
 
     }
 
-
     /*
      * displays the menu for the app
      */
@@ -120,8 +119,6 @@ public class SpotifyLikeApp {
 
         // open the audio file
         final File file = new File("Drake - Girls Want Girls.wav");
-
-       
 
         try {
         
