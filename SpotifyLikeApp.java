@@ -27,7 +27,7 @@ public class SpotifyLikeApp {
     String status;
     Long position;
     static Clip audioClip;
-    static String song = "./Mysong/Drake - No Friends In The Industry.wav";
+    static String song = "./Mysong/NoFriends.wav";
     static Boolean Playing = false;
     //private static Clip clip;
    // private static Object name;
@@ -99,6 +99,7 @@ public class SpotifyLikeApp {
                 
             case "p":
                 System.out.println("-->Play<--");
+                play(song);
                 break;
 
             case "q":
@@ -115,9 +116,9 @@ public class SpotifyLikeApp {
     /*
      * plays an audio file
      */
-    public static void play(String Song) {
+    public static void play(String song) {
         // open the audio file
-        final File file = new File(song);
+        File file = new File(song);
         try {
              if (Playing = true)
              {
@@ -158,7 +159,7 @@ public class SpotifyLikeApp {
     public static void Search() {
         String[] Songlist;
         Songlist = new String[2];
-        Songlist[0] = "./Mysong/Drake - No Friends In The Industry.wav";
+        Songlist[0] = "./Mysong/NoFriends.wav";
         Songlist[1] = "./Mysong/Dee_Yan-Key_-_10_-_vacaciones_salsa.wav";
 
         for(int k = 0; k < Songlist.length; k++)
