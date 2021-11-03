@@ -120,11 +120,12 @@ public class SpotifyLikeApp {
         // open the audio file
         File file = new File(song);
         try {
-             if (Playing = true)
+             if (Playing == true)
              {
                  audioClip.stop();
                  Playing = false;
              }
+
             // create clip 
             audioClip = AudioSystem.getClip();
             // get input stream
@@ -158,9 +159,12 @@ public class SpotifyLikeApp {
 
     public static void Search() {
         String[] Songlist;
-        Songlist = new String[2];
+        Songlist = new String[5];
         Songlist[0] = "./Mysong/NoFriends.wav";
-        Songlist[1] = "./Mysong/Dee_Yan-Key_-_10_-_vacaciones_salsa.wav";
+        Songlist[1] = "./Mysong/Vacaciones.wav";
+        Songlist[2] = "./Mysong/Bisou_-_04_-_Journey_of_King.wav";
+        Songlist[3] = "./Mysong/Stop Living A Lie.wav";
+        Songlist[4] = "./Mysong/Drake - Girls Want Girls ft. Lil Baby.wav";
 
         for(int k = 0; k < Songlist.length; k++)
         {
