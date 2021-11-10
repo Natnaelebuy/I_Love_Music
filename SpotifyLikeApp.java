@@ -43,7 +43,7 @@ public static void main(String[] args) {
             s.setFilePath("./Song/Drake - Girls Want Girls.wav");
 
             s = new Song();
-            s.setArtist("Ed - sheeran shape of you");
+            s.setArtist("Ed - sheeran ");
             s.setTitle("shape of you");
             s.setYear("2017");
             s.setGenre("Pop");
