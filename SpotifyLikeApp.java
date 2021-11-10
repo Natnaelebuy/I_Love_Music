@@ -104,7 +104,8 @@ private static void handleMenu(String userInput) {
             if (song !=null)
             {
                 System.out.println("Your current selection is now playing");
-                play((String) song.getFilePath());
+                
+                play(song.getFilePath());
 
             }else {
                 System.out.println("sorry, please search again.");
@@ -158,9 +159,7 @@ private static void play(String filePath) {
         Playing = true;
     } catch(Exception e) {
         e.printStackTrace(); 
-    
     }
-    
     
 }
 public static void Rewind() 
