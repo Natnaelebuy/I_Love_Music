@@ -43,8 +43,8 @@ public class Sound {
 		buttonPanel.setBackground(Color.black);
 		con.add(buttonPanel);
 		
-		soundButton = new JButton("Sound Effect");
-		soundButton = new JButton("pause");
+		
+		soundButton = new JButton("play");
 		soundButton.setFocusPainted(false);
 		soundButton.addActionListener(bHandler);
 		soundButton.setActionCommand("soundB");
@@ -58,7 +58,68 @@ public class Sound {
 
 
 	}
+	public static void menu() {
+
+        System.out.println("---- SpotifyLikeApp ----");
+        System.out.println("[H]ome");
+        System.out.println("[S]earch by title");
+        System.out.println("[L]ibrary");
+        System.out.println("[P]lay");
+        System.out.println("[Q]uit");
+        System.out.println("[F]avorte");
+        System.out.println("1, pause");
+        
+
+        System.out.println("");
+        System.out.print("Enter q to quit:");
+
+    }
+
+    /*
+     * handles the user input for the app
+     */
+    public static void handleMenu(String userInput) {
+
+        switch(userInput) {
+
+            case "h":
+                System.out.println("-->Home<--");
+                break;
+
+            case "s":
+                System.out.println("-->Search by title<--");
+                Search();      
+                break;
+
+            case "l":
+                System.out.println("-->Library<--");                                   
+                break;
+
+            case "q":
+                System.out.println("-->Quit<--");
+                break;
+            case "f":
+                System.out.println("-->favorite song<--");            
+                Search();
+                break;
+            case "1":
+            System.out.println("-->pause<--");
+            pause();
+				break;
+            
+
+            default:
+                break;
+        }
+
+    }
 	
+	private static void pause() {
+	}
+
+	private static void Search() {
+	}
+
 	public class SoundEffect {
 		
 		Clip clip;
